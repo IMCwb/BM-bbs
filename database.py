@@ -56,6 +56,7 @@ def new_comment(topic_id, name, content):
 
 def __new_data(data):
     sql = "INSERT INTO {} VALUE(".format(data[0])
+    print(sql)
 
     for element in data[1:]:
         if element != 'NULL':
@@ -82,12 +83,14 @@ def edit_notice(partname, content):
 
 def set_icon(name, icon):
     sql = "UPDATE account SET icon='{}' WHERE name='{}'".format(icon, name)
+    print(sql)
     return __edit_tuple(sql)
 
 
 def edit_topic(topic_id, content):
     sql = "UPDATE topic SET content='{}' WHERE id='{}'".format(
         content, topic_id)
+    print(sql)
     return __edit_tuple(sql)
 
 

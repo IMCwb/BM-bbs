@@ -70,6 +70,7 @@ $(document).ready(function () {
         $.ajax({
             type: "POST",
             data: {
+                _xsrf: $.cookie("_xsrf"),
                 status: 2,
                 id: topic_id,
                 content: content

@@ -10,14 +10,14 @@ CREATE TABLE account
   password  VARCHAR(16) NOT NULL,
   time      DATETIME    NOT NULL,
   signature TINYTEXT,
-  icon      TINYTEXT NOT NULL ,
+  icon      TEXT    NOT NULL,
   PRIMARY KEY (name)
 );
 
 CREATE TABLE part
 (
   partname VARCHAR(16),
-  notice TEXT,
+  notice   TEXT,
   PRIMARY KEY (partname)
 );
 
